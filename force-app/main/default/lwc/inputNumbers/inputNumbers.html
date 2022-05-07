@@ -1,0 +1,18 @@
+<template>
+    <div >
+        <div >
+            <lightning-input maxlength = "5" class= "slds-text-heading_large" type="text" label="Pattern" onchange={onProvidingPattern}></lightning-input>
+        </div>
+        <div>
+            <lightning-input maxlength = "5" class= "slds-text-heading_large" type="text" label="Includes" onchange={onProvidingIncluded} required></lightning-input>
+        </div>
+        <div >
+            <lightning-dual-listbox name="Exclude" label="Select Letters" source-label="Letters" selected-label="Excluded" field-level-help="Select Letters which are excluded" options={letterOptions} onchange={onExcludingLetter}></lightning-dual-listbox>
+        </div>
+        <br/>
+        <div >
+            <lightning-button label="Search" onclick={fetchWords}> </lightning-button>
+        </div>
+    </div>
+</template>
+<!-- class="col-sm-3" -->
